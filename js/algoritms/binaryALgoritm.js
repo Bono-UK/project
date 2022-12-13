@@ -37,10 +37,10 @@ const quickSort = (array) => {
 }
 quickSort(array)
 //-------------------------------------------
-  let end = list.length
+  let end = array.length
   let start = 0
 
-const recursiveBinarySearch = (arrat, item, start, end,middle) => {
+const recursiveBinarySearch = (array, item, start, end,middle) => {
   count+=1
   let middle = Math.floor((start + end)/2);
   if (item === array[middle]) {

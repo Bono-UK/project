@@ -45,7 +45,7 @@ const list = [...array]
 console.log(list);
 
 const recursiveBinarySearch = (list, item, start, end,middle) => {
-   
+  count+=1
   let middle = Math.floor((start + end)/2);
   if (item === list[middle]) {
     return middle
@@ -59,6 +59,6 @@ const recursiveBinarySearch = (list, item, start, end,middle) => {
 
 console.log("----------recursiveBinarySearch-------");
 console.log("searchNum :",recursiveBinarySearch(list,searchNum, 0,list.length));
-console.log("count :",countRecursiveBinarySearch);
+console.log("count :",count);
 
 //

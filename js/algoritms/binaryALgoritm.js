@@ -61,19 +61,4 @@ console.log("----------recursiveBinarySearch-------");
 console.log("searchNum :",recursiveBinarySearch(list,searchNum, 0,list.length));
 console.log("count :",countRecursiveBinarySearch);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //

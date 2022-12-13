@@ -1,32 +1,42 @@
+let array = [];
 
-let count = 0 
-const array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-
-let start = 0
-let end = array.length
-const searchNum = 14
-
-const recursiveBinarySearch = (array, item, start, end) => {
-    let middle = (start + end) / 2
-    count += 1
-    if (item === array[middle]) {
-        return middle
-    }
-    if (item < array[middle]) {
-        return recursiveBinarySearch(array, item, 0, middle - 1 )
-    } else {
-        return recursiveBinarySearch(array, item, middle + 1, end )
-    }
+const generationRandom = () => {
+  return array = Math.round(10* Math.random())
 }
 
-console.log(recursiveBinarySearch(array, searchNum));
-console.log("count =",count);
+const generationArray = () => {
+  for (let i = 0; i < 100; i++) {
+    array.push(generationRandom())
+  }
+  return array
+} 
+console.log(generationArray(array));
 
+let count = 0
 
+const quickSort = (array) => {
+  if (array.length <= 1) {
+    return array
+  }
+  let pivotIndex = Math.floor(array.length / 2);
+  let pivot = array[pivotIndex]
+  let less = [];
+  let greater = [];
+  for (let i = 0; i < array.length; i++) {
+    count+=1
+    if (i === pivotIndex) {
+      continue
+    }
+    if (array[i] < pivot) {
+      less.push(array[i])
+    } else {
+      greater.push(array[i])
+    }
+  }
+  return [...quickSort(less), pivot, ...quickSort(greater)]
+}
 
-
-
-
+console.log(quickSort(array));
 
 
 

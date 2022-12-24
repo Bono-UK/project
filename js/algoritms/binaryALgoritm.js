@@ -15,8 +15,8 @@ console.log(generationArray(array));
 let count = 0
 
 const quickSort = (array) => {
-  if (array <= 1) {
-    return array
+  if (array <= 1) { 
+    return array 
   }
   let pivotIndex = Math.floor(array.length /2);
   let pivot = array[pivotIndex]
@@ -56,5 +56,3 @@ const recursiveBinarySearch = (array, item, start, end) => {
 console.log("----------recursiveBinarySearch-------");
 console.log("searchNum :",recursiveBinarySearch(list,searchNum, 0,list.length));
 console.log("count :",count);
-
-//
